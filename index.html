@@ -19,7 +19,7 @@
             --color-link-highlight: rgba(255, 255, 255, 0.25);
             
             --color-text: #ffffff; /* Fully opaque white for max contrast */
-            --color-focus-outline: #5ab1ff;
+            --color-focus-outline: #ff0000;
             
             --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             --font-weight-bold: 600;
@@ -51,7 +51,7 @@
             color: var(--color-text);
             
             /* A vibrant background is essential to see the glassmorphism effect. */
-            background-image: linear-gradient(45deg, #ff005c, #5200ff);
+            background-image: linear-gradient(45deg, #ffffff, #ffffff);
             background-attachment: fixed; /* Ensures the gradient doesn't scroll with content */
         }
         
@@ -59,7 +59,7 @@
         .content {
             padding: calc(var(--navbar-height) + 2rem) var(--navbar-padding);
             height: 200vh;
-            color: white; /* Make text readable on gradient */
+            color: rgb(0, 0, 0); /* Make text readable on gradient */
             text-align: center;
         }
         
@@ -162,7 +162,7 @@
         
         .navbar__menu.is-active { 
             display: flex; 
-            background-image: linear-gradient(45deg, #ff005c, #5200ff);
+            background-image: linear-gradient(45deg, #ffffff, #ffffff);
         }
 
         .navbar__item { text-align: center; }
