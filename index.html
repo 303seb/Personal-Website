@@ -21,11 +21,11 @@
 
         body {
             min-height: 100vh;
-            background: #131313; /* soft black background */
+            background: #131313;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #f5f5f0; /* creamy off-white text */
+            color: #f5f5f0;
         }
 
         .container {
@@ -40,7 +40,7 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #2a2a2a; /* subtle border */
+            border: 3px solid #2a2a2a;
             margin-bottom: 16px;
         }
 
@@ -84,17 +84,19 @@
 
         .links a {
             text-decoration: none;
-            color: #131313; /* dark text on creamy button */
-            background: #f5f5f0; /* creamy off-white buttons */
+            color: #131313;
+            background: #fff7eb; /* creamier button background */
             padding: 14px;
             border-radius: 10px;
             font-weight: 500;
-            transition: background 0.2s, transform 0.2s;
+            border: 2px solid transparent;
+            transition: background 0.2s, border 0.2s, transform 0.2s;
         }
 
         .links a:hover {
-            background: #333333; /* very dark grey on hover */
-            color: #f5f5f0;
+            background: rgba(200, 180, 235, 0.45); /* light transparent lilac */
+            border: 2px solid #c8b4eb; /* lilac border */
+            color: #131313;
             transform: translateY(-2px);
         }
 
