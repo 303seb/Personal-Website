@@ -61,3 +61,82 @@
         .socials {
             display: flex;
             justify-content: center;
+            gap: 18px;
+            margin-bottom: 26px;
+        }
+
+        .socials a {
+            color: #f6f4ef;
+            font-size: 1.35rem;
+            opacity: 0.85;
+            transition: transform 0.2s, color 0.2s, background 0.2s;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .socials a:hover {
+            background: rgba(200, 180, 235, 0.35);
+            color: #f6f4ef;
+            transform: translateY(-2px);
+        }
+
+        /* BUTTON LINKS */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .links a {
+            text-decoration: none;
+            background: #fff3e4; /* creamier */
+            color: #fff3e4;      /* same shade as button */
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 500;
+            border: 2px solid transparent;
+            transition: background 0.2s, border 0.2s, transform 0.2s;
+        }
+
+        .links a:hover {
+            background: rgba(200, 180, 235, 0.45);
+            border: 2px solid #c8b4eb;
+            color: #fff3e4; /* stays cream */
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 28px;
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+
+        <h1>bazz</h1>
+        <p class="bio">trading and investing</p>
+
+        <div class="socials">
+            <a href="https://www.instagram.com/bazztrades/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/_bazztrades" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@bazztrades" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@bazztrades" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="links">
+            <a href="#">The Market Element</a>
+            <a href="#">Learn For Free</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <footer>
+            © 2026 The Market Element
+        </footer>
+    </div>
+
+</body>
+</html>
