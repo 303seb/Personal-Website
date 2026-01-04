@@ -3,133 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bazz Trades | Links</title>
+    <title>Bazz Trades</title>
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --black: #0e0e0f;
+            --soft-black: #141416;
+            --cream: #f5f1eb;
+            --lilac: #b9a7ff;
+            --muted: #a1a1a6;
+        }
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
         }
 
         body {
-            min-height: 100vh;
-            background: #131313;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #f5f5f0;
+            background: var(--black);
+            color: var(--cream);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Page Load Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: reveal 0.9s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Layout */
         .container {
-            width: 100%;
             max-width: 420px;
-            padding: 32px 20px;
-            text-align: center;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
         }
 
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #2a2a2a;
-            margin-bottom: 16px;
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border: 1px solid rgba(185, 167, 255, 0.4);
+            border-radius: 999px;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: var(--lilac);
+            margin-bottom: 24px;
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
             font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .highlight {
+            color: var(--lilac);
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 36px;
+        }
+
+        /* CTA */
+        .cta {
+            display: inline-block;
+            width: 100%;
+            padding: 16px;
+            background: var(--lilac);
+            color: #000;
+            font-weight: 600;
+            border-radius: 14px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(185, 167, 255, 0.35);
+        }
+
+        /* Section */
+        .section {
+            margin-top: 72px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--soft-black);
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .card h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat {
+            background: var(--soft-black);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat h4 {
+            font-size: 22px;
+            color: var(--lilac);
             margin-bottom: 6px;
         }
 
-        p.bio {
-            font-size: 1rem;
-            opacity: 0.85;
-            margin-bottom: 22px;
+        .stat span {
+            font-size: 12px;
+            color: var(--muted);
         }
 
-        .socials {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 26px;
+        /* Email Capture */
+        .email-box {
+            background: var(--soft-black);
+            border-radius: 20px;
+            padding: 26px;
+            margin-top: 32px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        .socials a {
-            color: #f5f5f0;
-            font-size: 1.35rem;
-            opacity: 0.85;
-            transition: transform 0.2s, opacity 0.2s;
+        .email-box p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 16px;
         }
 
-        .socials a:hover {
-            opacity: 1;
-            transform: translateY(-2px);
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .links a {
-            text-decoration: none;
-            color: #131313;
-            background: #fff1df; /* creamier */
+        .email-box input {
+            width: 100%;
             padding: 14px;
-            border-radius: 10px;
-            font-weight: 500;
-            border: 2px solid transparent;
-            transition: background 0.2s, border 0.2s, color 0.2s, transform 0.2s;
+            border-radius: 12px;
+            border: none;
+            background: #1c1c1f;
+            color: var(--cream);
+            margin-bottom: 12px;
+            font-size: 14px;
         }
 
-        .links a:hover {
-            background: rgba(200, 180, 235, 0.45);
-            border: 2px solid #c8b4eb;
-            color: #ffffff; /* text turns white */
-            transform: translateY(-2px);
+        .email-box input::placeholder {
+            color: #777;
         }
 
-        footer {
-            margin-top: 28px;
-            font-size: 0.75rem;
-            opacity: 0.6;
+        /* Footer */
+        .footer {
+            margin-top: 96px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 16px;
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 900px;
+                padding: 80px 40px;
+            }
+
+            h1 {
+                font-size: 56px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
 
-        <h1>bazz</h1>
-        <p class="bio">trading and investing</p>
+        <!-- HERO -->
+        <section class="hero reveal delay-1">
+            <div class="badge">PRIVATE TRADING BRAND</div>
+            <h1>Precision over <span class="highlight">emotion</span>.</h1>
+            <p class="subtitle">
+                Institutional-inspired trading. Risk-first execution. Zero noise.
+            </p>
+        </section>
 
-        <div class="socials">
-            <a href="https://www.instagram.com/bazztrades/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/_bazztrades" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.youtube.com/@bazztrades" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@bazztrades?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
+        <!-- EMAIL CAPTURE -->
+        <section class="reveal delay-2">
+            <div class="email-box">
+                <p>Join the private list. Trade insights. No spam.</p>
+                <form action="https://formspree.io/f/xxxxxx" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="cta">Request Access</button>
+                </form>
+            </div>
+        </section>
 
-        <div class="links">
-            <a href="#">The Market Element</a>
-            <a href="#">Learn For Free</a>
-            <a href="#">Contact</a>
-        </div>
+        <!-- VALUE -->
+        <section class="section reveal delay-3">
+            <div class="section-title">What I Do</div>
 
-        <footer>
-            © 2026 The Market Element
-        </footer>
+            <div class="card">
+                <h3>High-Probability Execution</h3>
+                <p>Structure, liquidity, patience — no forced trades.</p>
+            </div>
+
+            <div class="card">
+                <h3>Risk-First Framework</h3>
+                <p>Capital protection always comes before growth.</p>
+            </div>
+
+            <div class="card">
+                <h3>Documented Process</h3>
+                <p>Every trade reviewed. Every edge refined.</p>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="section reveal delay-4">
+            <div class="section-title">Track Record</div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h4>5+ yrs</h4>
+                    <span>Experience</span>
+                </div>
+                <div class="stat">
+                    <h4>Low DD</h4>
+                    <span>Risk Control</span>
+                </div>
+                <div class="stat">
+                    <h4>Selective</h4>
+                    <span>Frequency</span>
+                </div>
+                <div class="stat">
+                    <h4>Process</h4>
+                    <span>Over Hype</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section class="footer reveal delay-4">
+            <p>Not financial advice. Trading involves risk.</p>
+        </section>
+
     </div>
 
 </body>
