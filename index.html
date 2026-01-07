@@ -177,35 +177,55 @@
             color: var(--muted);
         }
 
-        /* Email Capture */
-        .email-box {
-            background: var(--soft-black);
-            border-radius: 20px;
-            padding: 26px;
-            margin-top: 32px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
+        <!-- MENTORSHIP APPLICATION -->
+<section class="reveal delay-2">
+    <div class="email-box">
+        <p><strong>Mentorship Application</strong><br>
+        This is a selective program. Apply seriously.</p>
 
-        .email-box p {
-            font-size: 14px;
-            color: var(--muted);
-            margin-bottom: 16px;
-        }
+        <form action="https://formspree.io/f/xxxxxx" method="POST">
 
-        .email-box input {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            background: #1c1c1f;
-            color: var(--cream);
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
+            <label>
+                How long have you been trading?
+                <select name="experience" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="Less than 6 months">Less than 6 months</option>
+                    <option value="6–12 months">6–12 months</option>
+                    <option value="1–3 years">1–3 years</option>
+                    <option value="3+ years">3+ years</option>
+                </select>
+            </label>
 
-        .email-box input::placeholder {
-            color: #777;
-        }
+            <label>
+                What is your current profitability?
+                <select name="profitability" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="Not profitable">Not profitable</option>
+                    <option value="Break-even">Break-even</option>
+                    <option value="Inconsistently profitable">Inconsistently profitable</option>
+                    <option value="Consistently profitable">Consistently profitable</option>
+                </select>
+            </label>
+
+            <label>
+                What is your primary goal with trading?
+                <textarea name="goal" placeholder="Be specific." required></textarea>
+            </label>
+
+            <label>
+                Email address
+                <input type="email" name="email" placeholder="you@email.com" required>
+            </label>
+
+            <label>
+                Phone number
+                <input type="tel" name="phone" placeholder="+1 (555) 555-5555" required>
+            </label>
+
+            <button type="submit" class="cta">Submit Application</button>
+        </form>
+    </div>
+</section>
 
         /* Footer */
         .footer {
