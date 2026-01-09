@@ -62,8 +62,25 @@ h1 {
 .app-box {
     background: var(--panel);
     border-radius: 22px;
-    padding: 28px;
+    padding: 0;
     border: 1px solid rgba(255,255,255,.05);
+    overflow: hidden;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(135deg, rgba(242,227,179,.15), rgba(242,227,179,.05));
+    color: var(--accent);
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    border-bottom: 1px solid rgba(242,227,179,.25);
+}
+
+.app-inner {
+    padding: 28px;
 }
 
 .progress {
@@ -132,6 +149,41 @@ button {
     color: var(--text);
 }
 
+/* Qualifications */
+.qualifications {
+    margin-top: 64px;
+}
+
+.qualifications h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.qual-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.qual {
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+.qual strong {
+    color: var(--accent);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.qual span {
+    font-size: 14px;
+    color: var(--muted);
+}
+
 @keyframes fade {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -147,6 +199,7 @@ button {
 @media (min-width: 768px) {
     .container { max-width: 900px; }
     h1 { font-size: 56px; }
+    .qual-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -162,60 +215,95 @@ button {
 </section>
 
 <section class="app-box">
-    <div class="progress"><span id="bar"></span></div>
+    <div class="banner">Only 10 spots left for 2026!</div>
 
-    <form action="https://formspree.io/f/xxxxxx" method="POST" id="appForm">
+    <div class="app-inner">
+        <div class="progress"><span id="bar"></span></div>
 
-        <div class="step active">
-            <label>How long have you been trading?</label>
-            <select name="experience" required>
-                <option value="">Select one</option>
-                <option>Less than 6 months</option>
-                <option>6–12 months</option>
-                <option>1–3 years</option>
-                <option>3+ years</option>
-            </select>
-            <button type="button" class="next">Next</button>
-        </div>
+        <form action="https://formspree.io/f/xxxxxx" method="POST" id="appForm">
 
-        <div class="step">
-            <label>What is your current profitability?</label>
-            <select name="profitability" required>
-                <option value="">Select one</option>
-                <option>Not profitable</option>
-                <option>Break-even</option>
-                <option>Inconsistent</option>
-                <option>Consistently profitable</option>
-            </select>
-            <div class="buttons">
-                <button type="button" class="back">Back</button>
+            <div class="step active">
+                <label>How long have you been trading?</label>
+                <select name="experience" required>
+                    <option value="">Select one</option>
+                    <option>Less than 6 months</option>
+                    <option>6–12 months</option>
+                    <option>1–3 years</option>
+                    <option>3+ years</option>
+                </select>
                 <button type="button" class="next">Next</button>
             </div>
-        </div>
 
-        <div class="step">
-            <label>What is your goal with trading?</label>
-            <textarea name="goal" required></textarea>
-            <div class="buttons">
-                <button type="button" class="back">Back</button>
-                <button type="button" class="next">Next</button>
+            <div class="step">
+                <label>What is your current profitability?</label>
+                <select name="profitability" required>
+                    <option value="">Select one</option>
+                    <option>Not profitable</option>
+                    <option>Break-even</option>
+                    <option>Inconsistent</option>
+                    <option>Consistently profitable</option>
+                </select>
+                <div class="buttons">
+                    <button type="button" class="back">Back</button>
+                    <button type="button" class="next">Next</button>
+                </div>
             </div>
-        </div>
 
-        <div class="step">
-            <label>Email address</label>
-            <input type="email" name="email" required>
-
-            <label>Phone number</label>
-            <input type="tel" name="phone" required>
-
-            <div class="buttons">
-                <button type="button" class="back">Back</button>
-                <button type="submit" class="next">Submit Application</button>
+            <div class="step">
+                <label>What is your goal with trading?</label>
+                <textarea name="goal" required></textarea>
+                <div class="buttons">
+                    <button type="button" class="back">Back</button>
+                    <button type="button" class="next">Next</button>
+                </div>
             </div>
+
+            <div class="step">
+                <label>Email address</label>
+                <input type="email" name="email" required>
+
+                <label>Phone number</label>
+                <input type="tel" name="phone" required>
+
+                <div class="buttons">
+                    <button type="button" class="back">Back</button>
+                    <button type="submit" class="next">Submit Application</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<section class="qualifications">
+    <h2>Minimum Qualifications</h2>
+
+    <div class="qual-grid">
+        <div class="qual">
+            <strong>3+ Years Experience</strong>
+            <span>Foundational market exposure and cycle awareness.</span>
         </div>
 
-    </form>
+        <div class="qual">
+            <strong>Risk-First Mindset</strong>
+            <span>Capital preservation prioritized over aggressive growth.</span>
+        </div>
+
+        <div class="qual">
+            <strong>Documented Process</strong>
+            <span>Clear entry, exit, and risk rules — no impulse trading.</span>
+        </div>
+
+        <div class="qual">
+            <strong>Emotional Discipline</strong>
+            <span>Ability to execute without revenge or overtrading.</span>
+        </div>
+
+        <div class="qual">
+            <strong>Long-Term Commitment</strong>
+            <span>Focus on consistency and longevity, not short-term hype.</span>
+        </div>
+    </div>
 </section>
 
 <section class="footer">
