@@ -149,37 +149,43 @@ button {
     color: var(--text);
 }
 
-/* Qualifications */
-.qualifications {
+/* Credentials */
+.credentials {
     margin-top: 64px;
 }
 
-.qualifications h2 {
+.credentials h2 {
     font-family: "Playfair Display", serif;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
-.qual-grid {
+.credentials p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.cred-grid {
     display: grid;
-    gap: 14px;
+    gap: 16px;
 }
 
-.qual {
+.cred {
     background: var(--panel);
-    border-radius: 16px;
-    padding: 18px;
-    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.04);
 }
 
-.qual strong {
+.cred strong {
     color: var(--accent);
     font-weight: 500;
     display: block;
     margin-bottom: 6px;
 }
 
-.qual span {
+.cred span {
     font-size: 14px;
     color: var(--muted);
 }
@@ -199,7 +205,7 @@ button {
 @media (min-width: 768px) {
     .container { max-width: 900px; }
     h1 { font-size: 56px; }
-    .qual-grid { grid-template-columns: repeat(2, 1fr); }
+    .cred-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -211,7 +217,7 @@ button {
 <section class="hero">
     <div class="badge">MARKET ELEMENT MENTORSHIP</div>
     <h1>Private Mentorship Application</h1>
-    <p class="subtitle">Selective trading mentorship.</p>
+    <p class="subtitle">One-on-one guidance from a certified market professional.</p>
 </section>
 
 <section class="app-box">
@@ -275,33 +281,29 @@ button {
     </div>
 </section>
 
-<section class="qualifications">
-    <h2>Minimum Qualifications</h2>
+<section class="credentials">
+    <h2>Mentorship Credentials</h2>
+    <p>Built on experience, discipline, and verified market execution.</p>
 
-    <div class="qual-grid">
-        <div class="qual">
-            <strong>3+ Years Experience</strong>
-            <span>Foundational market exposure and cycle awareness.</span>
+    <div class="cred-grid">
+        <div class="cred">
+            <strong>Certified Market Trader</strong>
+            <span>Formally trained in market structure, liquidity, and risk frameworks.</span>
         </div>
 
-        <div class="qual">
-            <strong>Risk-First Mindset</strong>
-            <span>Capital preservation prioritized over aggressive growth.</span>
+        <div class="cred">
+            <strong>Multiple Market Cycles Traded</strong>
+            <span>Experience across varying volatility, trends, and macro conditions.</span>
         </div>
 
-        <div class="qual">
-            <strong>Documented Process</strong>
-            <span>Clear entry, exit, and risk rules — no impulse trading.</span>
+        <div class="cred">
+            <strong>Risk-Managed Methodology</strong>
+            <span>Capital preservation and probability-driven execution.</span>
         </div>
 
-        <div class="qual">
-            <strong>Emotional Discipline</strong>
-            <span>Ability to execute without revenge or overtrading.</span>
-        </div>
-
-        <div class="qual">
-            <strong>Long-Term Commitment</strong>
-            <span>Focus on consistency and longevity, not short-term hype.</span>
+        <div class="cred">
+            <strong>Process-First Approach</strong>
+            <span>Structured trade planning, execution, and review systems.</span>
         </div>
     </div>
 </section>
