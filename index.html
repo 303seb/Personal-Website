@@ -151,45 +151,34 @@ button {
 
 /* Credentials */
 .credentials {
-    margin-top: 64px;
+    margin-top: 72px;
+    text-align: center;
 }
 
 .credentials h2 {
     font-family: "Playfair Display", serif;
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.credentials p {
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 28px;
+    font-size: 30px;
+    margin-bottom: 32px;
 }
 
 .cred-grid {
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
 }
 
 .cred {
     background: var(--panel);
-    border-radius: 18px;
-    padding: 20px;
+    border-radius: 16px;
+    padding: 24px 16px;
     border: 1px solid rgba(255,255,255,.04);
-}
-
-.cred strong {
-    color: var(--accent);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.cred span {
     font-size: 14px;
-    color: var(--muted);
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: .04em;
 }
 
+/* Animations */
 @keyframes fade {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -205,7 +194,6 @@ button {
 @media (min-width: 768px) {
     .container { max-width: 900px; }
     h1 { font-size: 56px; }
-    .cred-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -283,28 +271,12 @@ button {
 
 <section class="credentials">
     <h2>Mentorship Credentials</h2>
-    <p>Built on experience, discipline, and verified market execution.</p>
 
     <div class="cred-grid">
-        <div class="cred">
-            <strong>Certified Market Trader</strong>
-            <span>Formally trained in market structure, liquidity, and risk frameworks.</span>
-        </div>
-
-        <div class="cred">
-            <strong>Multiple Market Cycles Traded</strong>
-            <span>Experience across varying volatility, trends, and macro conditions.</span>
-        </div>
-
-        <div class="cred">
-            <strong>Risk-Managed Methodology</strong>
-            <span>Capital preservation and probability-driven execution.</span>
-        </div>
-
-        <div class="cred">
-            <strong>Process-First Approach</strong>
-            <span>Structured trade planning, execution, and review systems.</span>
-        </div>
+        <div class="cred">Certified Market Trader</div>
+        <div class="cred">Multi-Year Live Trading</div>
+        <div class="cred">Risk-First Execution</div>
+        <div class="cred">Institutional Frameworks</div>
     </div>
 </section>
 
