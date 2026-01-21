@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bazz Trades</title>
+<title>Market Element Mentorship</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
@@ -26,14 +26,14 @@ body {
 }
 
 .container {
-    max-width: 420px;
+    max-width: 480px;
     margin: auto;
     padding: 40px 20px 80px;
 }
 
 .hero {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
 }
 
 .badge {
@@ -44,30 +44,126 @@ body {
     font-size: 12px;
     letter-spacing: .1em;
     color: var(--accent);
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 42px;
     margin-bottom: 14px;
 }
 
-.subtitle {
-    color: var(--muted);
-    font-size: 15px;
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    margin-bottom: 12px;
 }
 
-/* Application */
+.hero p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Story / About */
+.story {
+    margin-bottom: 52px;
+    text-align: left;
+}
+
+.story h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.story p {
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* Benefits */
+.benefits {
+    background: var(--panel);
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.05);
+    margin-bottom: 48px;
+}
+
+.benefits h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--accent);
+}
+
+.benefits ul {
+    list-style: none;
+}
+
+.benefits li {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 10px;
+    padding-left: 14px;
+}
+
+/* Social Proof */
+.testimonials {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.testimonials h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.testimonial {
+    background: var(--panel);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.05);
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.testimonial p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.testimonial span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* Application CTA */
+.app-cta {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.app-cta button {
+    background: var(--accent);
+    color: #000;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Reuse your existing application */
 .app-box {
     background: var(--panel);
     border-radius: 22px;
     padding: 0;
     border: 1px solid rgba(255,255,255,.05);
     overflow: hidden;
+    margin-bottom: 64px;
 }
 
-/* Banner */
 .banner {
     background: linear-gradient(135deg, rgba(242,227,179,.15), rgba(242,227,179,.05));
     color: var(--accent);
@@ -83,6 +179,7 @@ h1 {
     padding: 28px;
 }
 
+/* reuse your progress/form styles from before */
 .progress {
     height: 4px;
     background: #2a2a2a;
@@ -90,7 +187,6 @@ h1 {
     margin-bottom: 24px;
     overflow: hidden;
 }
-
 .progress span {
     display: block;
     height: 100%;
@@ -99,205 +195,136 @@ h1 {
     transition: width .3s ease;
 }
 
-.step {
-    display: none;
-    animation: fade .4s ease;
-}
-
-.step.active { display: block; }
-
-label {
-    font-size: 13px;
-    color: var(--muted);
-}
-
-input, select, textarea {
-    width: 100%;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    padding: 14px;
-    border-radius: 14px;
-    border: none;
-    background: #242424;
-    color: var(--text);
-    font-size: 14px;
-}
-
-textarea { min-height: 90px; resize: vertical; }
-
-.buttons {
-    display: flex;
-    gap: 12px;
-}
-
-button {
-    flex: 1;
-    padding: 14px;
-    border-radius: 14px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.next {
-    background: var(--accent);
-    color: #000;
-}
-
-.back {
-    background: #2a2a2a;
-    color: var(--text);
-}
-
-/* Credentials */
-.credentials {
-    margin-top: 72px;
-    text-align: center;
-}
-
-.credentials h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    margin-bottom: 32px;
-}
-
-.cred-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-}
-
-.cred {
-    background: var(--panel);
-    border-radius: 16px;
-    padding: 24px 16px;
-    border: 1px solid rgba(255,255,255,.04);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: .04em;
-}
-
-/* Animations */
-@keyframes fade {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* Footer */
 .footer {
     text-align: center;
     margin-top: 80px;
     font-size: 12px;
     color: var(--muted);
 }
-
-@media (min-width: 768px) {
-    .container { max-width: 900px; }
-    h1 { font-size: 56px; }
-}
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<section class="hero">
-    <div class="badge">MARKET ELEMENT MENTORSHIP</div>
-    <h1>Private Mentorship Application</h1>
-    <p class="subtitle">One-on-one guidance from a certified market professional.</p>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="badge">PRIVATE 1:1 MENTORSHIP</div>
+        <h1>Market Element Mentorship</h1>
+        <p>Guided mastery for serious traders — craft your process, elevate your performance.</p>
+    </section>
 
-<section class="app-box">
-    <div class="banner">Only 10 spots left for 2026!</div>
+    <!-- STORY / ABOUT YOU -->
+    <section class="story">
+        <h2>About Your Mentor</h2>
+        <p>You’re guided by a certified market professional with years of live trading experience and disciplined risk-managed execution. I bring structure, clarity, and repeatable processes so that you don’t waste years learning through trial and error.</p>
+        <p>This mentorship isn’t theory — it’s practical, tested, and focused on lasting consistency.</p>
+    </section>
 
-    <div class="app-inner">
-        <div class="progress"><span id="bar"></span></div>
+    <!-- BENEFITS -->
+    <section class="benefits">
+        <h3>What You’ll Gain</h3>
+        <ul>
+            <li>Clarity in market structure and execution</li>
+            <li>Disciplined risk-first frameworks</li>
+            <li>Repeatable trade review systems</li>
+            <li>Mentorship that aligns with your journey</li>
+        </ul>
+    </section>
 
-        <form action="https://formspree.io/f/xxxxxx" method="POST" id="appForm">
+    <!-- SOCIAL PROOF -->
+    <section class="testimonials">
+        <h3>Results From Past Mentees</h3>
+        <div class="testimonial">
+            <p>"This mentorship changed the way I trade — structure over emotion." </p>
+            <span>— Trader A</span>
+        </div>
+        <div class="testimonial">
+            <p>"Consistent execution and accountability made all the difference." </p>
+            <span>— Trader B</span>
+        </div>
+    </section>
 
-            <div class="step active">
-                <label>How long have you been trading?</label>
-                <select name="experience" required>
-                    <option value="">Select one</option>
-                    <option>Less than 6 months</option>
-                    <option>6–12 months</option>
-                    <option>1–3 years</option>
-                    <option>3+ years</option>
-                </select>
-                <button type="button" class="next">Next</button>
-            </div>
+    <!-- APPLICATION CTA -->
+    <section class="app-cta">
+        <button onclick="document.getElementById('appFormSection').scrollIntoView({behavior:'smooth'})">Apply for Mentorship</button>
+    </section>
 
-            <div class="step">
-                <label>What is your current profitability?</label>
-                <select name="profitability" required>
-                    <option value="">Select one</option>
-                    <option>Not profitable</option>
-                    <option>Break-even</option>
-                    <option>Inconsistent</option>
-                    <option>Consistently profitable</option>
-                </select>
-                <div class="buttons">
-                    <button type="button" class="back">Back</button>
+    <!-- YOUR MULTI-STEP APPLICATION -->
+    <section id="appFormSection" class="app-box">
+        <div class="banner">Only 10 spots left for 2026!</div>
+        <div class="app-inner">
+            <div class="progress"><span id="bar"></span></div>
+
+            <form action="https://formspree.io/f/xxxxxx" method="POST" id="appForm">
+                <!-- multi-step form (same as before) -->
+                <div class="step active">
+                    <label>How long have you been trading?</label>
+                    <select name="experience" required>
+                        <option value="">Select one</option>
+                        <option>Less than 6 months</option>
+                        <option>6–12 months</option>
+                        <option>1–3 years</option>
+                        <option>3+ years</option>
+                    </select>
                     <button type="button" class="next">Next</button>
                 </div>
-            </div>
-
-            <div class="step">
-                <label>What is your goal with trading?</label>
-                <textarea name="goal" required></textarea>
-                <div class="buttons">
-                    <button type="button" class="back">Back</button>
-                    <button type="button" class="next">Next</button>
+                <div class="step">
+                    <label>What is your current profitability?</label>
+                    <select name="profitability" required>
+                        <option value="">Select one</option>
+                        <option>Not profitable</option>
+                        <option>Break-even</option>
+                        <option>Inconsistent</option>
+                        <option>Consistently profitable</option>
+                    </select>
+                    <div class="buttons">
+                        <button type="button" class="back">Back</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="step">
-                <label>Email address</label>
-                <input type="email" name="email" required>
-
-                <label>Phone number</label>
-                <input type="tel" name="phone" required>
-
-                <div class="buttons">
-                    <button type="button" class="back">Back</button>
-                    <button type="submit" class="next">Submit Application</button>
+                <div class="step">
+                    <label>What is your goal with trading?</label>
+                    <textarea name="goal" required></textarea>
+                    <div class="buttons">
+                        <button type="button" class="back">Back</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
                 </div>
-            </div>
+                <div class="step">
+                    <label>Email address</label>
+                    <input type="email" name="email" required>
+                    <label>Phone number</label>
+                    <input type="tel" name="phone" required>
+                    <div class="buttons">
+                        <button type="button" class="back">Back</button>
+                        <button type="submit" class="next">Submit Application</button>
+                    </div>
+                </div>
 
-        </form>
-    </div>
-</section>
+            </form>
+        </div>
+    </section>
 
-<section class="credentials">
-    <h2>Mentorship Credentials</h2>
-
-    <div class="cred-grid">
-        <div class="cred">Certified Market Trader</div>
-        <div class="cred">Multi-Year Live Trading</div>
-        <div class="cred">Risk-First Execution</div>
-        <div class="cred">Institutional Frameworks</div>
-    </div>
-</section>
-
-<section class="footer">
-    Not financial advice. Trading involves risk.
-</section>
+    <!-- FOOTER -->
+    <section class="footer">
+        Not financial advice. Trading involves risk.
+    </section>
 
 </div>
 
 <script>
+// multi-step form JS (reuse from before)
 const steps = document.querySelectorAll(".step");
 const nextBtns = document.querySelectorAll(".next");
 const backBtns = document.querySelectorAll(".back");
 const bar = document.getElementById("bar");
 let current = 0;
-
 function update() {
     steps.forEach((s, i) => s.classList.toggle("active", i === current));
     bar.style.width = ((current + 1) / steps.length) * 100 + "%";
 }
-
 nextBtns.forEach(btn => {
     btn.onclick = () => {
         const inputs = steps[current].querySelectorAll("input, select, textarea");
@@ -311,7 +338,6 @@ nextBtns.forEach(btn => {
         update();
     };
 });
-
 backBtns.forEach(btn => {
     btn.onclick = () => {
         if (current > 0) current--;
